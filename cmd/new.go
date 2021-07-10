@@ -3,7 +3,7 @@ package cmd
 import (
 	"fmt"
 	"github.com/spf13/cobra"
-	"os"
+	"tasknotion/backend"
 )
 
 func init() {
@@ -15,6 +15,6 @@ var newCommand = &cobra.Command{
 	Short: "Add a task",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("Add a new task")
-		fmt.Println(os.Getenv("DATABASE_ID"))
+		backend.Test()
 	},
 }
